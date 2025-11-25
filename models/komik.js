@@ -19,9 +19,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        ImageType: DataTypes.STRING,
-        ImageName: DataTypes.STRING,
-        ImageData: DataTypes.BLOB('long'),
+        imageType: DataTypes.STRING,
+        imageName: DataTypes.STRING,
+        imageData: DataTypes.BLOB('long'),
     }, {
         tableName : 'Komik',
         timestamps: true,
