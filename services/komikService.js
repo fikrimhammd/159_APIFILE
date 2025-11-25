@@ -8,4 +8,16 @@ async function createKomik(database, komikData) {
     throw new Error('Title, description, dan author wajib diisi');
   }
 
- 
+  // Membuat entri baru di database
+  const newKomik = await database.Komik.create({
+    title,
+    description,
+    author,
+    imageType: imageType || null,
+    imageName: imageName || null,
+    imageData: imageData || null, // Pastikan imageData adalah Buffer jika diupload
+  });
+
+  return newKomik;
+}
+
